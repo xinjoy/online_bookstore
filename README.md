@@ -26,3 +26,4 @@ Back to the old terminal tab:
 ```bash
 $ rails s
 ```
+The website then can been seen at http://localhost:3000
