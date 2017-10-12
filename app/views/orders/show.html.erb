@@ -1,0 +1,49 @@
+<% if notice %>
+<p id="notice"><%= notice %></p> 
+<% end %>
+
+<p>
+  <strong>Order #:</strong>
+  <%= @order.id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @order.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @order.address %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @order.email %>
+</p>
+
+<p>
+  <strong>Pay type:</strong>
+  <%= @order.pay_type %>
+</p>
+
+<p>
+  <strong>Order Details:</strong>
+  <br><br>
+  <% @order.line_items.each do |line_item| %>
+  	Book Name: <%= line_item.product.name %>, Price: $<%= line_item.product.price %>, Quantity: <%= line_item.quantity %>
+  	<br>
+  <% end %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%
+    total = 0
+    @order.line_items.each {|x| total += x.quantity * x.product.price} 
+  %>
+  <%= number_to_currency(total) %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

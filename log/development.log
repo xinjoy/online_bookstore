@@ -1,0 +1,139 @@
+Started GET "/" for 127.0.0.1 at 2017-10-12 11:36:51 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ShopperController#index as HTML
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopper/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC[0m
+  Rendered shopper/index.html.erb within layouts/application (1240.8ms)
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered carts/_cart.html.erb (30.5ms)
+Completed 200 OK in 1437ms (Views: 1391.6ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-10-12 11:36:57 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mCart Load (7.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered carts/_cart.html.erb (4.7ms)
+Completed 200 OK in 87ms (Views: 63.8ms | ActiveRecord: 7.9ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-10-12 11:37:02 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kxdW+BsSOXh6MxYSWBQiMZZmCYLVuykyViTCO+DDywDksEiYsYEK0MuhyowQ10n0HR/7ZYObIAElPj+w7v1FWA==", "name"=>"xinxin", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "xinxin"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Completed 302 Found in 12ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-10-12 11:37:02 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered carts/_cart.html.erb (4.8ms)
+Completed 200 OK in 72ms (Views: 68.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-10-12 11:37:09 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bg0z5Ab7V4q/uQtIXwDhB07kRIlj0ry/gv1e8awB4M8msnXQjKsoN4BnxbPODL111lDtGLFDWMiE2e8wdrRt/w==", "name"=>"xinxin", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "xinxin"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-10-12 11:37:09 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered carts/_cart.html.erb (4.5ms)
+Completed 200 OK in 69ms (Views: 65.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-12 11:37:11 -0700
+Processing by ShopperController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopper/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC[0m
+  Rendered shopper/index.html.erb within layouts/application (29.8ms)
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered carts/_cart.html.erb (4.8ms)
+Completed 200 OK in 108ms (Views: 101.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-12 11:37:12 -0700
+Processing by ShopperController#index as HTML
+  [1m[36mCart Load (1.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopper/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.4ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC[0m
+  Rendered shopper/index.html.erb within layouts/application (41.6ms)
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered carts/_cart.html.erb (5.1ms)
+Completed 200 OK in 134ms (Views: 125.7ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-10-12 11:37:14 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mCart Load (2.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered carts/_cart.html.erb (4.5ms)
+Completed 200 OK in 119ms (Views: 111.9ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-10-12 11:37:21 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"06EDhaxO+tIqRabzZ1LR4+cPGlvxTyN2AU/XgC2fS+akBh3lBt3JepvXem0vkbombHbovKdvKkVyVSoLI6HFvg==", "name"=>"xinxin", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "xinxin"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-10-12 11:37:21 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered carts/_cart.html.erb (4.9ms)
+Completed 200 OK in 74ms (Views: 70.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-10-12 11:37:23 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CdFGur7+V9ltdCwrcixgbCPzK01D4FPrFt153aHCb9QpbgCONK4oZFKq4tDjIDweu0eC3JFxt5wQ+cgce3fi5A==", "name"=>"", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mCart Load (1.0ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", ""], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-10-12 11:37:23 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered carts/_cart.html.erb (4.7ms)
+Completed 200 OK in 72ms (Views: 68.2ms | ActiveRecord: 0.8ms)
+
+

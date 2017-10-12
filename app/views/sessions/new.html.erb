@@ -1,0 +1,21 @@
+<div class="order_form">
+  <% if notice %>
+    <p id="notice"><%= notice %></p>
+  <% end %>
+  <%= form_tag do %>
+    <fieldset>
+      <div class="form_title">Please Log In</div><br>
+      <div class="field">
+        <%= label_tag :name, 'Name:' %>
+        <%= text_field_tag :name, params[:name] %> 
+      </div>
+      <div class="field">
+        <%= label_tag :password, 'Password:' %>
+        <%= password_field_tag :password, params[:password] %>
+      </div> 
+      <div>
+        <%= submit_tag "Login" %> 
+      </div>
+    </fieldset> 
+  <% end %>
+</div>
