@@ -9,7 +9,7 @@ The **Online Bookstore** is a website where people can search and order books, a
 
 Clone the repository.
 ```bash
-$ git clone https://github.com/xxin666/online_bookstore.git
+$ git clone https://github.com/xinjoy/online_bookstore.git
 ```
 Install the dependencies.
 ```bash
